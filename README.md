@@ -38,6 +38,10 @@ For this module a Raspberry Pi is used with an Arduino Mega as the controlling u
 The wiring looks like:
 ![Alt text](images/piServer.jpg?raw=true "Fritzing version of hardware set up")
 
+![Alt text](images/buttons.jpg?raw=true "Fritzing version of button set up")
+
+![Alt text](images/sensor.jpg?raw=true "Fritzing version of sensor set up")
+
 ### Installing
 
 Once the prerequisites are completed go to root and run 

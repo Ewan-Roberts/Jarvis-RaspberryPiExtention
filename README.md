@@ -36,7 +36,7 @@ You will need to connect the relevant extended hardwarte over your local network
 For this module a Raspberry Pi is used with an Arduino Mega as the controlling unit. Additional modules connect through the local network and share socket sessions for sharing functionality. 
 
 The wiring looks like:
-![Alt text](public/images/jarvis_hardware.jpg?raw=true "Fritzing version of hardware set up")
+![Alt text](images/piServer.jpg?raw=true "Fritzing version of hardware set up")
 
 ### Installing
 

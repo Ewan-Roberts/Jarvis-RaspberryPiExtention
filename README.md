@@ -44,7 +44,7 @@ The layout of the hardware wiring can be found below:
 
 ![Alt text](images/sensor.jpg?raw=true "Fritzing version of sensor set up")
 
-## Installing
+## Running
 
 Once the prerequisites are completed, go to root and run:
 

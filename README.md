@@ -1,12 +1,10 @@
 # Jarvis-RaspberryPiExtention
-This is an additional module added to the core of Jarvis to control additional functionality on a Raspberry Pi 
 
-This is an extention of the "Jarvis" which can be found here: https://github.com/vanguard12/Jarvis
+_This is an additional module_ added to the core of the Jarvis Project [the Jarvis Project](https://github.com/vanguard12/Jarvis) to add additional light switching, door opening/closing and buttons to the core of the project.
 
-Jarvis is a home automation platform running on Node.js. It is able to track movement, respond to commands and provide useful functionality to make everything from waking up in the morning to coming home more automated and interesting.
+Jarvis is a voice and motion activated home automation platform. It provides developers with everything from automating light switching and door opening, to welcoming users home with the news of the day and their favourite songs on Spotify.
 
-This is extention of this functionality using the Rasperry Pi as base.
-
+This is extension of this functionality using the Raspberry Pi as base.
 
 ## Getting Started
 
@@ -21,21 +19,23 @@ npm install
 
 ### Prerequisites
 
-You will require the latest version of Node.js which you can download here: https://nodejs.org/en/download/
+- Jarvis: For how to set up Jarvis refer to https://github.com/vanguard12/Jarvis.
 
-You will require an Arduino, a server of any form, though this uses a raspberry pi and servos set up on any light switches you would like to automate, more details of which can be found in the hardware section below. 
+- Node.js: You will require the latest version of Node.js which can download here: https://nodejs.org/en/download/
 
-This project is designed to be modular with aditional functionality being shared through sockets. Please refer to piServer for controls of the lights, more automated lights and the opening and closing of doors.
+- Raspberry Pi: You will need a server to run this from, for this i have used a raspberryPi due to its low power draw and complexity.
 
-A good understanding of http://johnny-five.io/ is highly reccomended for additional extentions. They have created a very user friendly and simple API. I suggest looking them up here: https://github.com/rwaldron/johnny-five
+- Arduino: You will require an Arduino, Firmata and servos set up on any light switches you would like to automate, more details of which can be found in the hardware and Arduino section below. 
 
-You will need to connect the relevant extended hardwarte over your local network and provide an internal IP for sockets to be established between the prgrams.
+- Johnny-Five: A good understanding of http://johnny-five.io/ is highly recommended for additional extensions. They have created a very user friendly and simple API. API documentation here: https://github.com/rwaldron/johnny-five
+
+- Internal IP: A local IP for sockets to be established between the programs needs to be defined in the core Jarvis program.
 
 ### Hardware
 
-For this module a Raspberry Pi is used with an Arduino Mega as the controlling unit. Additional modules connect through the local network and share socket sessions for sharing functionality. 
+Though this project is only limited to the Ardunio's supported in the Johnny-Five suppoerted list is should workon most types and all oporating systems Node supports. For this module a Raspberry Pi is used with an Arduino Mega 2560 as the controlling unit. 
 
-The wiring looks like:
+The layout of the hardware wiring can be found below:
 ![Alt text](images/piServer.jpg?raw=true "Fritzing version of hardware set up")
 
 ![Alt text](images/buttons.jpg?raw=true "Fritzing version of button set up")

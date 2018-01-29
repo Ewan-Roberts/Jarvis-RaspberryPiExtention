@@ -1,6 +1,6 @@
 # Jarvis-RaspberryPiExtention
 
-_This is an additional module_ added to the core of the Jarvis Project [the Jarvis Project](https://github.com/vanguard12/Jarvis) to add additional light switching, door opening/closing and buttons to the core of the project.
+_This is an additional module_ added to the core of the [the Jarvis Project](https://github.com/vanguard12/Jarvis) to add additional light switching, door opening/closing and buttons to the core of the project.
 
 Jarvis is a voice and motion activated home automation platform. It provides developers with everything from automating light switching and door opening, to welcoming users home with the news of the day and their favourite songs on Spotify.
 

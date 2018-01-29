@@ -17,7 +17,8 @@ git clone https://github.com/vanguard12/Jarvis-RaspberryPiExtention.git
 npm install
 ```
 
-### Prerequisites
+
+## Prerequisites
 
 - Jarvis: For how to set up Jarvis refer to https://github.com/vanguard12/Jarvis.
 
@@ -31,7 +32,8 @@ npm install
 
 - Internal IP: A local IP for sockets to be established between this project and Jarvis needs to be defined in the core Jarvis program.
 
-### Hardware
+
+## Hardware
 
 Though this project is only limited to the Ardunio's supported in the Johnny-Five supported list, it should work on most types and any operating systems Node supports. However, for this instance a RaspberryPi is used with an Arduino Mega 2560 as the controlling unit. 
 
@@ -42,7 +44,7 @@ The layout of the hardware wiring can be found below:
 
 ![Alt text](images/sensor.jpg?raw=true "Fritzing version of sensor set up")
 
-### Installing
+## Installing
 
 Once the prerequisites are completed, go to root and run:
 

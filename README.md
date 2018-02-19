@@ -42,7 +42,7 @@ The layout of the hardware wiring can be found below:
 
 ![Alt text](images/buttons.jpg?raw=true "Fritzing version of button set up")
 
-![Alt text](images/sensor.jpg?raw=true "Fritzing version of sensor set up")
+![Alt text](images/sensor.JPG?raw=true "Fritzing version of sensor set up")
 
 ## Running
 

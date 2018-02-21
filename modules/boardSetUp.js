@@ -1,11 +1,23 @@
 "use strict";
 
 const five = require("johnny-five"),
-	board = new five.Board();
+	board = new five.Board({repl: false});
 
 board.on("ready", () => {
 
     console.log('board up');
+
+    // const hallwayRelay = new five.Relay({pin:11,type: "NC"})
+
+    // const hallwayLight = new five.Servo({
+    //     pin: 9,
+    //     range: [20,80],
+    // });
+
+    // board.repl.inject({
+    //     relay: hallwayRelay,
+    //     servo: hallwayLight
+    // });
 
     const led = require('./led.js')
 

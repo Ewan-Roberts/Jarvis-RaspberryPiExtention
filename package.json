@@ -9,6 +9,10 @@
   "author": "ER",
   "license": "MIT",
   "dependencies": {
-    "johnny-five": "^0.13.0"
+    "johnny-five": "^0.13.0",
+    "moment": "^2.20.1",
+    "node-persist": "^2.1.0",
+    "serialport": "^6.0.5",
+    "socket.io": "^2.0.4"
   }
 }

@@ -1,14 +1,7 @@
 "use strict";
 
-const moment = require('moment');
-
-const eventHandler = require('./eventHandler.js')
-
-const fs = require("fs");
-
-let fileName = '../globals.json';
-
-let file = require(fileName);
+const moment = require('moment'),
+	eventHandler = require('./eventHandler.js');
 
 eventHandler.on("hallway", action => {
 

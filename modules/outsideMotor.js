@@ -1,19 +1,18 @@
 "use strict";
 
-const five = require("johnny-five");
+const five = require("johnny-five"),
+    eventHandler = require('./eventHandler')
 
-const eventHandler = require('./eventHandler.js')
+// let outsideMotorRelay = new five.Relay(25);
 
-let outsideMotorRelay = new five.Relay(25);
-
-let outsideServo = new five.Servo({
+// let outsideServo = new five.Servo({
       
-    pin:      2, 
-    type:     "continuous",
-    speed:    0.2, 
-    time:     20000
+//     pin:      2, 
+//     type:     "continuous",
+//     speed:    0.2, 
+//     time:     20000
 
-})
+// })
 
 eventHandler.on("outsideServo", action => {
         

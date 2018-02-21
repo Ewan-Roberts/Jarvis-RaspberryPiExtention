@@ -1,27 +1,77 @@
 "use strict";
 
-const five = require("johnny-five");
+const five = require("johnny-five"),
+	eventHandler = require('./eventHandler.js'),
+	moment = require("moment")
 
-const eventHandler = require('./eventHandler.js')
+let timeDiff = moment().add(20,"minutes").format("HH:mm");
 
-const hallwayMotion = new five.Motion(3);
+eventHandler.on("resetMovementTimer", () => {timeDiff = moment().add(20,"minutes").format("HH:mm")});
 
-const moment = require('moment');
+setInterval(() => {
 
-hallwayMotion.on("motionstart", () => {
-            
-    eventHandler.emit("leds", true)
+    let time = moment().format("HH:mm");
 
-    eventHandler.emit("corridorMotion")
+    console.log(time)
 
-    eventHandler.emit("hallwayLight",true)
+    console.log(timeDiff)
 
-});
+    if(time === timeDiff){
 
-hallwayMotion.on("motionend", () => {
+    	eventHandler.emit("hallwayLight",false)
 
-    eventHandler.emit("leds", false)
+    }
+
+
+}, 60000);
+
+const hallwayMotion = new five.Motion({
+
+	pin: 3,
+
+    freq: 1000,
+
+    calibrationDelay: 2000
     
 });
+
+let pauseMotion = false;
+
+const motionStart = () => {
+
+	if(!pauseMotion){
+
+		console.log('motion')
+
+		eventHandler.emit("resetMovementTimer")
+
+	    eventHandler.emit("leds", true)
+
+	    eventHandler.emit("hallwayLight",true)
+
+	} else {
+
+		console.log("motion wanted but a buffer is going")
+
+	}
+
+}
+
+eventHandler.on("motionBuffer", () => {
+
+	pauseMotion = true
+
+	setTimeout(()=>{
+
+		pauseMotion = false;
+
+
+	},5000)
+
+})
+
+hallwayMotion.on("motionstart", () => {motionStart()});
+
+hallwayMotion.on("motionend", () => {eventHandler.emit("leds", false)});
 
         
